@@ -8,6 +8,9 @@ dat$Time <- strptime(dat$Time,"%H:%M:%S")
 ## create a subset of data with data of 2007 February 1st and 2nd
 subdata <- subset(dat,dat$Date %in% (as.Date(c('2007-02-01', '2007-02-02'))))
 
+## only one plot
+par(mfrow = c(1, 1))
+
 ## Create an histogram
 hist(subdata$Global_active_power,col = "red",main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 

@@ -11,6 +11,9 @@ dat$Date <- as.Date(dat$Date,"%d/%m/%Y")
 ## create a subset of data with data of 2007 February 1st and 2nd
 subdata <- subset(dat,dat$Date %in% (as.Date(c('2007-02-01', '2007-02-02'))))
 
+## only one plot
+par(mfrow = c(1, 1))
+
 ## Create the plot 
 plot(subdata$Time, subdata$Global_active_power,type="l",ylab = "Global Active Power (kilowatts)",xlab="")
 
